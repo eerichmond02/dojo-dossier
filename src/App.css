@@ -1,5 +1,11 @@
-.App {
+#root {
   text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.App {
+  margin: 30px;
 }
 
 .App-logo {
@@ -7,11 +13,10 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.App-header{
+  margin-top: 30px;
+  text-align: left;
+  font-size: 24px;
 }
 
 .App-title {
@@ -25,4 +30,64 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+#tabInfo {
+  text-align: left;
+  border: .5px solid #002B49;
+}
+
+#formDiv {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#titleInput {
+  width: 150px;
+  height: 30px;
+  padding-left: 3px;
+}
+
+#newButton {
+  width: 150px;
+  height: 40px;
+  margin-top: 5px;
+  padding: 2px;
+  height: 30px;
+}
+
+#addItemForm {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+#itemInput {
+  margin-right: 10px;
+  flex-grow: 2;
+  height: 30px;
+  padding-left: 3px;
+}
+
+#itemButton {
+  width: 150px;
+  height: 40px;
+  padding: 2px;
+  height: 30px;
+}
+
+.tabButton:hover {
+  outline: none;
+  border: none;
+}
+
+.tabButton:focus {
+  outline: none;
+  border: none;
+}
+
+#infoList {
+  min-height: 120px;
 }
