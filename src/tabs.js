@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import './ui-toolkit/css/nm-cx/main.css'
+import './ui-toolkit/css/nm-cx/main.css' /* Need to copy this */
 import TabInfo from './TabInfo'
 import { connect } from 'react-redux';
 import { switchTab } from './state/actions'

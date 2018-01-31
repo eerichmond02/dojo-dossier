@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import './ui-toolkit/css/nm-cx/main.css'
+import './ui-toolkit/css/nm-cx/main.css' /* Need to copy this */
 import { connect } from 'react-redux';
 import { addItem } from './state/actions';
 
