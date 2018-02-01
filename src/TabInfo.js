@@ -23,23 +23,31 @@ class TabInfo extends Component {
 	}
 
 	render() {
-		let current;
-		if (!this.props.currentTab) { current = this.props.tabs[0]; }
-		else { current = this.props.currentTab; }
-
-		return (
-			<div id="tabInfo" className="columns small-12 padding-vert-medium">
-				<ul id="infoList">
-	      	{current.items.map((item, idx) =>  (
-		      	<li key={idx}>{item}</li>
-	      	))}
-				</ul>
-				<div id="addItemForm" className="row">
-					<input className="columns small-9" id="itemInput" placeholder="New item" onChange={this.handleChange} value={this.state.input}></input>
-					<button className="columns small-3" id="itemButton" onClick={() => {this.props.addItem(this.state.input, current.id); this.clearInput();}}>Add item</button>
+		if (!this.props.currentTab) {
+			return (
+				<div id="tabInfo" className="columns small-12 padding-vert-medium">
+					<ul id="infoList">
+					</ul>
+					<div id="addItemForm" className="row">
+					</div>
 				</div>
-			</div>
-		);
+			);
+		} else {
+			return (
+				<div id="tabInfo" className="columns small-12 padding-vert-medium">
+					<ul id="infoList">
+		      	{this.props.currentTab.items.map((item, idx) =>  (
+			      		<li key={idx}>{item}</li>
+		      		))
+		      	}
+					</ul>
+					<div id="addItemForm" className="row">
+						<input className="columns small-9" id="itemInput" placeholder="New item" onChange={this.handleChange} value={this.state.input}></input>
+						<button className="columns small-3" id="itemButton" onClick={() => {this.props.addItem(this.state.input, this.props.currentTab.id); this.clearInput();}}>Add item</button>
+					</div> 
+				</div>
+			); 
+		}
 	}
 }
 

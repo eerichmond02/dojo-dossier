@@ -9,7 +9,8 @@ const Tabs = (props) => {
 	return (
 		<div className="heading-nav padding-bottom-medium">
 			<ul className="tabs">
-      	{props.tabs.map((tab, idx) => {
+      	{ props.tabs.length > 0 ?
+      		props.tabs.map((tab, idx) => {
       		let classes = "tab-title";
       		if (!props.currentTab) {
       			if (idx === 0) { classes = classes.concat(" active"); }
@@ -21,11 +22,15 @@ const Tabs = (props) => {
 	      			<button className="tabButton "onClick={() => { props.switchTab(tab.id); }}>{tab.name}</button>
       			</li>
       		);
-      	})}
+      	}) :
+    			<li className="tab-title">
+    				<button className="tabButton ">Add a new tab</button>
+    			</li>
+      	}
 			</ul>
 			<TabInfo />
-	</div>
-	);
+		</div>
+	); 
 }
 
 Tabs.propTypes = {

@@ -24,13 +24,7 @@ class Tab {
 }
 
 const initialState = {
-  tabs: [
-    new Tab ('Sally', ['Owns a pet dog']),
-    new Tab ('Jim', ['JavaScript programmer']),
-    new Tab ('Gemma', ['Enjoys yoga']),
-    new Tab ('Arthur', ['Has three kids']),
-    new Tab ('Heath', ['Great listener', 'Owns a pet python', 'Played volleyball in college'])
-  ],
+  tabs: [],
   currentTab: undefined,
 }
 
