@@ -60,9 +60,11 @@ const reducer = (state=initialState, action) => {
         currentTab: selectTab(state.tabs, action.payload)
       }
     case ADD_TAB:
+      let newTab = new Tab(action.payload);
       return {
         ...state,
-        tabs: state.tabs.concat(new Tab(action.payload))
+        tabs: state.tabs.concat(newTab),
+        currentTab: newTab
       }
     case ADD_ITEM:
       return {
